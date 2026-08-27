@@ -37,9 +37,6 @@ export default function Login(){
             <button className="btn" type="submit">Sign in</button>
           </div>
         </form>
-        <div style={{marginTop:12,fontSize:13,color:'#6b7280'}}>
-          <div><strong>Test account:</strong> proforma@josue.dev / Abc@123456</div>
-        </div>
       </div>
     </div>
   )
