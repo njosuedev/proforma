@@ -42,6 +42,7 @@ type FormData = {
   sellerRepName: string;
   sellerSignatureDataUrl: string;
   sellerStampDataUrl: string;
+  buyerSignatureDataUrl: string;
   terms: string;
 };
 
