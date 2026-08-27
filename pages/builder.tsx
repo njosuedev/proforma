@@ -38,10 +38,11 @@ type FormData = {
   accentColor: string;
   headingsColor: string;
   logoDataUrl: string;
-  // new fields for seller signature and stamp
+  // new fields for seller and buyer signature / stamp
   sellerRepName: string;
   sellerSignatureDataUrl: string;
   sellerStampDataUrl: string;
+  buyerSignatureDataUrl: string;
   terms: string;
 };
 
