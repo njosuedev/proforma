@@ -1,0 +1,45 @@
+:root{
+  --accent:#8bc34a;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+  --text:#0f172a;
+}
+html,body,#__next{height:100%;}
+body{
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0; background:#f3f4f6; color:var(--text); -webkit-font-smoothing:antialiased;
+}
+.container{max-width:1100px;margin:24px auto;padding:20px;background:white;border-radius:8px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+.header{display:flex;gap:20px;align-items:center}
+.logo{background:var(--accent);color:white;padding:16px;border-radius:6px;font-weight:700}
+.title{flex:1}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.field{display:flex;flex-direction:column;margin-bottom:8px}
+label{font-size:12px;color:var(--muted);margin-bottom:6px}
+input,select,textarea{padding:8px;border:1px solid var(--border);border-radius:4px;font-size:14px}
+textarea{min-height:80px}
+.btn{background:var(--accent);color:white;padding:10px 14px;border-radius:6px;border:none;cursor:pointer}
+.actions{display:flex;gap:8px;justify-content:flex-end;margin-top:10px}
+.preview{border:1px solid var(--border);padding:12px;border-radius:6px;background:white}
+
+/* printable proforma styles */
+.proforma-container{width:100%;display:flex;flex-direction:column;gap:18px}
+.proforma-page{width:210mm;min-height:297mm;padding:18mm;margin:0 auto;color:#0b1724;background:white;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+.proforma-page .mast{background:var(--accent);color:white;padding:16px;border-radius:4px;display:flex;justify-content:space-between}
+.proforma-page h2{color:var(--heading);margin:14px 0 6px}
+.table{width:100%;border-collapse:collapse;margin-bottom:8px}
+.table td,.table th{border:1px solid var(--border);padding:6px;font-size:12px}
+.small{font-size:11px;color:var(--muted)}
+.section{margin-top:10px}
+.terms{font-size:12px}
+.signatures{display:flex;justify-content:space-between;margin-top:28px}
+.signature{width:45%;text-align:left}
+.signature .line{border-top:1px solid var(--border);margin-top:36px;padding-top:6px}
+
+/* print rules */
+@media print{
+  body *{visibility:hidden}
+  .print-area, .print-area *{visibility:visible}
+  .print-area{position:fixed;left:0;top:0;width:100%}
+  @page { size: A4; margin: 0; }
+}
